@@ -1,7 +1,7 @@
 from linked_list import ListNode, nodelist_builder, printNodes
 
 def sortList(head):
-    # Recursive split
+    # Recursive split and merge
     if head == None or head.next == None:
         return head
     mid = get_mid(head)

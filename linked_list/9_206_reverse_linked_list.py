@@ -11,6 +11,15 @@ def reverse(node):
         node = next
     return dummy_node.next
 
+# def reverse(head):
+#     if head == None or head.next == None:
+#         return head
+#     p = reverse(head.next)
+#     head.next.next = head  # 4->5  : 4->5->4
+#     head.next = None # 4->5->4  : 5->4
+#     return p
+
+
 if __name__ == "__main__":
     data = [
         [1, 2, 3, 4, 5],

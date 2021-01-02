@@ -13,19 +13,6 @@ class Codec:
         do_it(root)
         return " ".join(res)
 
-
-    # def deserialize(self, data):
-    #     def do_it():
-    #         val = next(vals)
-    #         if val == '#':
-    #             return None
-    #         node = TreeNode(int(val))
-    #         node.left = do_it()
-    #         node.right = do_it()
-    #         return node
-    #     vals = iter(data.split())
-    #     return do_it()
-
     def deserialize(self, data):
         def doit():
             val = next(vals)

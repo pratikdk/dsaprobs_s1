@@ -15,11 +15,21 @@
 #     hgg()
 #     print(x)
 # hg()
+
+# def hgg():
+#     x = 0
+#     def hg():
+#         print(x)
+#         y = x + 1
+#         print(y)
+#     hg()
+# hgg()
+
 def hgg():
-    x = 0
+    x = [0, 0]
     def hg():
         print(x)
-        y = x + 1
-        print(y)
+        x[0] = x[0] + 1
+        print(x)
     hg()
 hgg()

@@ -1,17 +1,5 @@
 from tree_node import TreeNode
 
-# def invertTree(root):
-#     queue = []
-#     queue.append(root)
-#     while queue:
-#         buffer = []
-#         for node in queue:
-#             if node.left:
-#                 buffer.append(node.left)
-#             if node.right:
-#                 buffer.append(node.right)
-#         buffer = reversed(buffer)
-#         for node in queue:
 def invertTree(root):
     queue = []
     queue.append(root)

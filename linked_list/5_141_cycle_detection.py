@@ -28,6 +28,6 @@ if __name__ == "__main__":
     n5.next = n6
     n6.next = n7
     n7.next = n8
-    n8.next = None
+    n8.next = n4
 
     print(hasCycle(n1))

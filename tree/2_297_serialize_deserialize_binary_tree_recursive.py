@@ -4,12 +4,18 @@ class Codec:
     def serialize(self, root):
         res = []
         def do_it(node):
-            if node:
-                res.append(str(node.value))
-                do_it(node.left)
-                do_it(node.right)
-            else:
+            if node == None:
                 res.append('#')
+                return
+            res.append(str(node.value))
+            do_it(node.left)
+            do_it(node.right)
+            # if node:
+            #     res.append(str(node.value))
+            #     do_it(node.left)
+            #     do_it(node.right)
+            # else:
+            #     res.append('#')
         do_it(root)
         return " ".join(res)
 

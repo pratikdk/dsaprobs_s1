@@ -45,19 +45,30 @@
 
 def generateParenthesis(N):
     if N == 0:
-        print('N:', N)
+        print('N ==', N, '[]')
         return ['']
     ans = []
     for i, c in enumerate(range(N)):
-        print("i:", i, " c:", c)
+        print("L:", c, "N:", N)
         for left in generateParenthesis(c):
-            print('>> ', "i:", i, " c:", c)
+            print('\t>> ', "i:", i, " c:", c)
             for right in generateParenthesis(N-1-c):
-                print('>>>> ', "i:", i, " c:", c)
-                ans.append('({}){}'.format(left, right))
+                print('\t\t>>>> ', " c:", c)
+                ans.append(f"({left}){right}")#.format(, ))
                 print(ans)
     return ans
 print(generateParenthesis(2))
+
+# 1 -> 0 0
+# 2 -> 0 1, 1 0
+# 3 -> 0 2, 1 1, 2 0
+
+# def generate_wave(n):
+#     for i in range(1, n+1):
+#         for j in range()
+#         print(i)
+#
+# generate_wave(3)
 
 # ((()))
 # (())()

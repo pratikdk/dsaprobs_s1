@@ -42,8 +42,6 @@ def evaluate(s):
             if operand_stack:
             else:
                 operand_queue.pop(0) operand_queue.pop(0)
-
-
         elif current_priority > next_priority: # current has high priority
             pass
         else: # current has less priority

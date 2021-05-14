@@ -7,6 +7,7 @@ def uniquePaths(m, n):
             if j == 0: row[j] = 1
             else: row[j] = row[j-1] + matrix[i-1][j]
         matrix.append(row)
+    print(matrix)
     return matrix[-1][-1]
 
 data = [

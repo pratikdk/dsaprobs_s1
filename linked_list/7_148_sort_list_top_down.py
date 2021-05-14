@@ -4,12 +4,12 @@ def sortList(head):
     # Recursive split and merge
     if head == None or head.next == None:
         return head
-    mid = get_mid(head)
+    mid = get_mid_and_detach(head)
     left = sortList(head)
     right = sortList(mid)
     return merge(left, right)
 
-def get_mid(head):
+def get_mid_and_detach(head):
     mid_prev = None
     if head != None and head.next != None:
         mid_prev = head if mid_prev == None else mid_prev.next
@@ -41,6 +41,7 @@ if __name__ == "__main__":
         [1]
     ]
     for test_list in data:
+
         head = nodelist_builder(test_list)
         rhead = sortList(head)
         printNodes(rhead)

@@ -9,9 +9,9 @@ def mergeTrees(t1, t2):
         return t2
     if not t2:
         return t1
-    t1.value += t2.value
-    t1.left = mergeTrees(t1.left, t2.left)
-    t2.right = mergeTrees(t1.right, t2.right)
+    t1.value += t2.value # if both exist add both values and store in t1
+    t1.left = mergeTrees(t1.left, t2.left) # attach t2.left to t1.left if t1.left is missing
+    t1.right = mergeTrees(t1.right, t2.right)  # attach t2.right to t1.right if t1.right is missing
     return t1
 
 

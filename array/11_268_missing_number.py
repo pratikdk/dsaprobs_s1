@@ -11,9 +11,8 @@
 #     return (maxsum-minsum) - sum(nums)
 
 def missingNumber(nums):
-    min = 0
     max = len(nums)
-    maxsum = (max*(max+1))/2
+    maxsum = (max*(max+1))//2
     return (maxsum) - sum(nums)
 
 data = [

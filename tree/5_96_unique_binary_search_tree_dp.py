@@ -8,4 +8,9 @@ def numTrees(n):
 
 if __name__ == "__main__":
     #for i in range(1, 5):
-    print(numTrees(5))
+    print(numTrees(2))
+
+# construct with each node as root
+# consider this scenario
+# if [1, 2, 3 , 4, 5]
+# if 2 is root then g[2] 

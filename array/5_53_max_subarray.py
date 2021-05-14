@@ -1,6 +1,6 @@
 def maxSubArray(nums):
     max_sum = nums[0]
-    max = []
+    #max = []
     buffer = []
     for i, num in enumerate(nums):
         buffer.append(num)
@@ -11,11 +11,18 @@ def maxSubArray(nums):
             if buffer_sum <= 0:
                 buffer.pop()
                 #print("Here is max:", max, max_sum, sum(buffer), sum(max))
-            if sum(buffer) >= sum(max):
-                max = buffer
-                buffer = []
-            else: buffer = []
+            if sum(buffer) >= max_sum:
+                max_sum = buffer_sum
+                # max = buffer
+                # buffer = []
+            buffer = []
     return max_sum
+
+def msa(nums):
+    for i in range(1, len(nums)):
+        if nums[i-1] > 0:
+            nums[i] += nums[i-1]
+    return max(nums)
 #
 # def maxSubArray(nums):
 #     max_sum = nums[0]
@@ -48,3 +55,6 @@ data = [
 
 for test_list in data:
     print(maxSubArray(test_list))
+print()
+for test_list in data:
+    print(msa(test_list))

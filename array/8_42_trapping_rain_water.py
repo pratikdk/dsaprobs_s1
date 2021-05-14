@@ -68,13 +68,13 @@ def trap(heights):
     rightmax = 0
     ans = 0
     while left < right:
-        if heights[left] < heights[right]: # consider left edge
+        if heights[left] < heights[right]: # shift/set left edge
             if heights[left] >= leftmax:
                 leftmax = heights[left]
             else:
                 ans += leftmax - heights[left]
             left += 1
-        else: # consider left edge
+        else: # shift/set right edge
             if heights[right] >= rightmax:
                 rightmax = heights[right]
             else:

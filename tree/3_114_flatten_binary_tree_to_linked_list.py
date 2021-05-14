@@ -14,12 +14,17 @@ def flatten(root):
 #         return get_rightmost(node.right)
 #     else:
 #         return node
+#
+# def get_rightmost(node):
+#     if node == None: return None
+#     ret = get_rightmost(node.right)
+#     if ret == None: return node
+#     else: return ret
 
 def get_rightmost(node):
-    if node == None: return None
-    ret = get_rightmost(node.right)
-    if ret == None: return node
-    else: return ret
+    while node.right != None:
+        node = node.right
+    return node
 
 
 def printright(node):

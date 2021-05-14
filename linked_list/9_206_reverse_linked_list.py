@@ -9,8 +9,7 @@ def reverse(node):
         node.next = head.next #None if head.next == None else
         head.next = node
         node = next
-    return dummy_node.next
-
+    return head.next
 # def reverse(head):
 #     if head == None or head.next == None:
 #         return head

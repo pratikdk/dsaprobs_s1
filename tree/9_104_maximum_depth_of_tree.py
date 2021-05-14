@@ -1,7 +1,7 @@
 from tree_node import TreeNode
 
 def maxDepth(root):
-    if root == None: return 0
+    if root == None: return -1
     left = maxDepth(root.left)
     right = maxDepth(root.right)
     return max(left, right) + 1
@@ -22,4 +22,4 @@ if __name__ == "__main__":
     n3.left = n6
     n3.right = n7
     n7.right = n8
-    print(maxDepth(None))
+    print(maxDepth(n1))

@@ -16,12 +16,15 @@ def addTwoNumbers(l1, l2):
         curr = curr.next
         if p1 != None: p1 = p1.next
         if p2 != None: p2 = p2.next
+    if carry > 0:
+        curr.next = ListNode(carry)
     return dummy_node.next
 
 
 if __name__ == "__main__":
     data = [
         ([7, 1, 6], [5, 9, 2])
+        #([7, 1, 6, 9], [5, 9, 2])
         #([9, 9], [9, 9])
     ]
     head1 = nodelist_builder(data[0][0])

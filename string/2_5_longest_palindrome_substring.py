@@ -6,7 +6,7 @@ def longest_palindrome(s):
         len1 = expand_around_center(s, i, i)
         # Capture even palindrome at i
         len2 = expand_around_center(s, i, i+1)
-        # Consider palindrom with maximum len
+        # Consider palindrome with maximum len
         length = max(len1, len2)
         # Update start and end indices to max palindrome
         if (length > end-start): # if new max len
